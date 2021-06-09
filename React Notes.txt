@@ -1,0 +1,91 @@
+npx create-react-app my-app
+cd my-app
+npm start
+
+npm install --save bootstrap
+
+==================================
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
+import reportWebVitals from './reportWebVitals';
+
+const img1="https://static.toiimg.com/thumb/58394256.cms?width=1200&height=900";
+const img2="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/chicken-tandori-1526595014.jpg";
+const img3="https://www.cookwithmanali.com/wp-content/uploads/2018/12/Sarson-Ka-Saag.jpg";
+
+const customStyle={
+  color:"white",
+  backgroundColor:"black",
+  fontSize:"3rem"
+};
+
+customStyle.color="orange";
+
+ReactDOM.render(
+  <div>
+    <h1 className="h1" style={customStyle} contentEditable="true" >My Best Foods are</h1>
+    <ul>
+      <li>Chicken Curry</li>
+      <img className="foodimages" style={{border:"4px dotted red"}} height="400px" width="450px" src={img1} />
+      <li>Tandoori Chicken</li>
+      <img className="foodimages" height="400px" width="450px" src={img2} />
+      <li>Sarson Da Saag</li>
+      <img className="foodimages" height="400px" width="450px" src={img3} />
+    </ul>
+  </div>,
+  document.getElementById('root')
+);
+
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+reportWebVitals();
+
+=======================================================================================
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
+import reportWebVitals from './reportWebVitals';
+
+const date=new Date();
+const time=date.getHours();
+let greet;
+const customstyle={
+  color:"",
+  backgroundColor:""
+}
+
+
+if(time<12){
+  greet="Good Morning BABUA!!!"; 
+  customstyle.color="green";
+  customstyle.backgroundColor="pink";
+}else if(time>12 && time<15){
+  greet="Good Afternoon BABUA!!!";
+  customstyle.color="red";
+  customstyle.backgroundColor="brown";
+}else{
+  greet="Good Night BABUA!!!";
+  customstyle.color="white";
+  customstyle.backgroundColor="black";
+}
+
+ReactDOM.render(
+  <div>
+    <h1 className="h1" style={customstyle}>{greet}</h1>
+  </div>,
+  document.getElementById('root')
+);
+
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+reportWebVitals();
+
+===============================================================================
+
